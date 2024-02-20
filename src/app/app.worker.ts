@@ -21,7 +21,7 @@ function computeMove(boardState: BoardState) {
     return;
   }
   const board = new Board(boardState);
-  const bestMove = tryMoves(board, boardState.computerPlayer, 4);
+  const bestMove = tryMoves(board, boardState.computerPlayer, 3);
   if (bestMove) {
     postMessage(bestMove.board.toState(true));
   } else {
