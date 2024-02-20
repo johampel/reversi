@@ -1,0 +1,18 @@
+.player1 {
+  color: skyblue;
+}
+
+.player2 {
+  color: orange;
+}
+
+@media (orientation: landscape) {
+  .alignment {
+  }
+}
+
+@media (orientation: portrait) {
+  .alignment {
+    text-align: center;
+  }
+}

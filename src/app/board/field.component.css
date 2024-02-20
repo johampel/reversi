@@ -1,0 +1,70 @@
+.field {
+  pointer-events: none;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: lavender;
+  margin: 1px;
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 500px) or (max-height: 500px) {
+  .field {
+    width: 9vmin;
+    height: 9vmin;
+  }
+}
+
+.candidate {
+  pointer-events: auto;
+}
+
+.candidate:hover {
+  border-color: black;
+}
+
+.empty {
+}
+
+.player1 {
+  background-color: skyblue;
+  animation-name: player1;
+  animation-duration: 3s;
+}
+
+@keyframes player1 {
+  from {background-color: deepskyblue;}
+  to {background-color: skyblue;}
+}
+
+.lastMovePlayer1 {
+  animation-name: lastMovePlayer1;
+  animation-duration: 3s;
+}
+
+@keyframes lastMovePlayer1 {
+  from {border-color: blue;}
+  to {border-color: lavender;}
+}
+
+.player2 {
+  background-color: orange;
+  animation-name: player2;
+  animation-duration: 3s;
+}
+
+@keyframes player2 {
+  from {background-color: darkorange;}
+  to {background-color: orange;}
+}
+
+.lastMovePlayer2 {
+  animation-name: lastMovePlayer2;
+  animation-duration: 3s;
+}
+
+@keyframes lastMovePlayer2 {
+  from {border-color: red;}
+  to {border-color: lavender;}
+}
+

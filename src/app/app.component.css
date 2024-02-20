@@ -1,0 +1,16 @@
+@media (orientation: landscape) {
+  .top {
+    display: flex;
+  }
+  .child {
+    display: inline-flex;
+    padding-right: 20px;
+  }
+}
+
+@media (orientation: portrait) {
+  .top {
+    display: flex;
+    justify-content: center;
+  }
+}

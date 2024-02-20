@@ -1,0 +1,7 @@
+<div class="board">
+  <div class="row" *ngFor="let ign1 of [].constructor(size$ | async); let row = index">
+    <div class="field" *ngFor="let ign2 of [].constructor(size$ | async); let col = index">
+      <app-field [row]="row" [column]="col"></app-field>
+    </div>
+  </div>
+</div>

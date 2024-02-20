@@ -1,0 +1,17 @@
+.board {
+  display: table;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border-color: lavender;
+  border-style: solid;
+  border-width: 3px;
+  padding: 5px;
+}
+
+.row {
+  display: table-row;
+}
+
+.field {
+  display: table-cell;
+}

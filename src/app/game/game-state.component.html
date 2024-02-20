@@ -1,0 +1,22 @@
+<div class="alignment">
+  <p>
+    Es steht
+    <span class="player1">{{ (board$ | async)?.score?.at(0) }}</span> : <span
+    class="player2">{{ (board$ | async)?.score?.at(1) }}</span>
+  </p>
+
+  <div *ngIf="(status$ | async) === Status.Won" class="player1">
+    <p>Gratuliere, Du hast gewonnen!</p>
+    <button (click)="onNewGame()">Nochmal spielen</button>
+  </div>
+  <div *ngIf="(status$ | async) === Status.Lost" class="player2">
+    <p>Leider verloren... Revanche?</p>
+    <button (click)="onNewGame()">Nochmal spielen</button>
+  </div>
+  <div *ngIf="(status$ | async) === Status.Remis">Unentschieden... Nochmal?</div>
+  <div *ngIf="(status$ | async) === Status.HumanMustPlay" class="player1">Du bist dran!</div>
+  <div *ngIf="(status$ | async) === Status.HumanMustPass" class="player1">
+    <button (click)="onPass()">Bitte zum Aussetzen klicken, Du hast keine Zugm&ouml;glichkeit.</button>
+  </div>
+  <div *ngIf="(status$ | async) === Status.ComputerMustPlay" class="player2">Ich denke nach...</div>
+</div>
