@@ -4,7 +4,7 @@ import {BoardComponent} from "./board/board.component";
 import {select, Store} from "@ngrx/store";
 import {AppState, BoardState, selectBoard} from "./shared/state/state";
 import {newGame} from "./shared/state/actions";
-import {Observable, Subject} from "rxjs";
+import {Observable} from "rxjs";
 import {AsyncPipe} from "@angular/common";
 import {GameStateComponent} from "./game/game-state.component";
 
