@@ -1,12 +1,15 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { PlayerService } from './player.service';
+import {PlayerService} from './player.service';
+import {provideMockStore} from "@ngrx/store/testing";
 
 describe('PlayerService', () => {
   let service: PlayerService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [provideMockStore({})]
+    });
     service = TestBed.inject(PlayerService);
   });
 

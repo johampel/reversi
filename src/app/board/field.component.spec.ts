@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FieldComponent } from './field.component';
+import {provideMockStore} from "@ngrx/store/testing";
 
 describe('FieldComponent', () => {
   let component: FieldComponent;
@@ -8,10 +9,11 @@ describe('FieldComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FieldComponent]
+      imports: [FieldComponent],
+      providers: [provideMockStore({})]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(FieldComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GameStateComponent } from './game-state.component';
+import {provideMockStore} from "@ngrx/store/testing";
 
 describe('GameStateComponent', () => {
   let component: GameStateComponent;
@@ -8,10 +9,11 @@ describe('GameStateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GameStateComponent]
+      imports: [GameStateComponent],
+      providers: [provideMockStore({})]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(GameStateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
